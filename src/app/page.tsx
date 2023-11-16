@@ -5,6 +5,7 @@ import Instagram from './@instagram/page';
 import Sliders from './@sliders/page';
 // import Test from './@test/page';
 import Introduce from './@introduce/page';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -16,11 +17,13 @@ export default function Home() {
           alt="ソロトリロゴ"
         ></Image>
         <div className="hbg-menu fixed right-[6.5dvw]">
-          <div
-            className=" line relative w-10 h-1 bg-slate-50 rounded
-                        before:absolute before:w-10 before:h-1 before:bg-slate-50 before:rounded before:top-3
-                        after:absolute after:w-10 after:h-1 after:bg-slate-50 after:rounded after:top-6"
-          ></div>
+          <Link href="/login">
+            <div
+              className=" menu relative w-10 h-1 bg-slate-50 rounded
+                          before:absolute before:w-10 before:h-1 before:bg-slate-50 before:rounded before:top-3
+                          after:absolute after:w-10 after:h-1 after:bg-slate-50 after:rounded after:top-6"
+            ></div>
+          </Link>
         </div>
       </header>
       <main>
@@ -45,7 +48,7 @@ export default function Home() {
           </p>
           <Instagram />
         </section>
-        <Introduce/>
+        <Introduce />
       </main>
     </>
   );
