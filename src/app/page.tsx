@@ -32,7 +32,7 @@ export default function Home() {
             <Sliders />
           </div>
           <div className="absolute w-full flex justify-center top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 z-10 ">
-            <h1 className="text-5xl font-black text-white">
+            <h1 className="copy text-5xl font-black text-white">
               とりあえず、
               <br />
               旅してみない？

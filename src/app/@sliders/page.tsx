@@ -38,12 +38,7 @@ const Slider = () => {
       >
         {food.map((src, index) => (
           <SwiperSlide key={index}>
-            <Image
-              src={src}
-              width={390}
-              height={285}
-              alt="food_img"
-            />
+            <Image src={src} width={390} height={285} alt="food_img" />
           </SwiperSlide>
         ))}
       </Swiper>
@@ -62,12 +57,7 @@ const Slider = () => {
       >
         {place.map((src, index) => (
           <SwiperSlide key={index}>
-            <Image
-              src={src}
-              width={390}
-              height={285}
-              alt="place_img"
-            />
+            <Image src={src} width={390} height={285} alt="place_img" />
           </SwiperSlide>
         ))}
       </Swiper>
@@ -82,12 +72,7 @@ const Slider = () => {
       >
         {pref.map((src, index) => (
           <SwiperSlide key={index}>
-            <Image
-              src={src}
-              width={390}
-              height={285}
-              alt="pref_img"
-            />
+            <Image src={src} width={390} height={285} alt="pref_img" />
           </SwiperSlide>
         ))}
       </Swiper>
