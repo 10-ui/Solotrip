@@ -25,51 +25,82 @@ export default function Signup() {
 
   return (
     <>
-      <div className="h-[100dvh] w-[100dvw] grid items-center justify-center">
-        <main className="inner">
-          <h1 className="text-2xl font-bold text-center">新規登録フォーム</h1>
-          <form onSubmit={onSubmit}>
-            <div>
-              <label htmlFor="email">メールアドレス</label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </div>
-            <div>
-              <label htmlFor="password">パスワード</label>
-              <input
-                type="password"
-                name="password"
-                id="password"
-                required
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-            </div>
-            <div>
-              <label htmlFor="passwordConf">パスワード(再入力)</label>
-              <input
-                type="password"
-                name="passwordConf"
-                id="passwordConf"
-                required
-                value={passwordConf}
-                onChange={(e) => setPasswordConf(e.target.value)}
-              />
-            </div>
-            <div>
-              <button className="bg-orange-300 py-1 px-3 rounded" type="submit">
-                サインアップ
-              </button>
-            </div>
-          </form>
-        </main>
-      </div>
+      <main className="inner w-350 mx-auto mt-40 mb-160 text-bases">
+        <h1 className="text-4xl font-bold text-left mb-8">新規登録</h1>
+        <form className="w-full" onSubmit={onSubmit}>
+          <div>
+            <label className="w-full text-base mb-3 font-bold" htmlFor="email">
+              ニックネーム
+            </label>
+            <input
+              type="text"
+              name="text"
+              className="w-full rounded-2 py-3 px-4 mb-4 text-base text-form"
+              id="text"
+              placeholder="ニックネーム"
+              required
+              value={email}
+              // onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+          <div>
+            <label className="w-full text-base mb-3 font-bold" htmlFor="email">
+              メールアドレス
+            </label>
+            <input
+              type="email"
+              name="email"
+              className="w-full rounded-2 py-3 px-4 mb-4 text-base text-form"
+              id="email"
+              placeholder="メールアドレス"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+          <div>
+            <label
+              className="w-full text-base mb-3 font-bold"
+              htmlFor="password"
+            >
+              パスワード
+            </label>
+            <input
+              type="password"
+              name="password"
+              className="w-full rounded-2 py-3 px-4 mb-4 text-base text-form"
+              id="password"
+              placeholder="パスワード"
+              required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+          <div className='mb-8'>
+            <label
+              className="w-full text-base mb-3 font-bold"
+              htmlFor="passwordConf"
+            >
+              パスワード(再入力)
+            </label>
+            <input
+              type="password"
+              name="passwordConf"
+              className="w-full rounded-2 py-3 px-4 mb-4 text-base text-form"
+              id="passwordConf"
+              placeholder="パスワード(再入力)"
+              required
+              value={passwordConf}
+              onChange={(e) => setPasswordConf(e.target.value)}
+            />
+          </div>
+          <div>
+            <button className="bg-accent w-full font-bold text-base py-3 px-4 rounded-42" type="submit">
+              新規登録する
+            </button>
+          </div>
+        </form>
+      </main>
     </>
   );
 }
