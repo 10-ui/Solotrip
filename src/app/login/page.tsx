@@ -27,49 +27,81 @@ export default function Login() {
   };
 
   return (
-    <div className="h-[100dvh] w-[100dvw] grid items-center justify-center">
-      <main className="inner">
-        <div>
-          <form onSubmit={onLogin}>
-            <div>
-              <label>メールアドレス</label>
-              <input
-                type="email"
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </div>
-            <div>
-              <label>パスワード</label>
-              <input
-                type="password"
-                required
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-            </div>
-            <div>
-              <label>パスワード（確認）</label>
-              <input
-                type="password"
-                required
-                value={passwordConf}
-                onChange={(e) => setPasswordConf(e.target.value)}
-              />
-            </div>
-            <div>
-              <button type="submit">ログイン</button>
-              <br />
-              <Link href="/signup">
-                ユーザー登録がお済みでない方はこちらから
-              </Link>
-              <br />
-              <Link href="/sendemail">パスワードをお忘れの方はこちらから</Link>
-            </div>
-          </form>
+    <main className="inner w-350 mx-auto mt-40 mb-160 text-bases">
+      <h1 className="text-4xl font-bold text-left mb-8">ログイン</h1>
+      <form onSubmit={onLogin}>
+        <div className="mb-8">
+          <div>
+            <label className="w-full text-base mb-3 font-bold" htmlFor="email">
+              メールアドレス
+            </label>
+            <input
+              type="email"
+              name="email"
+              className="w-full rounded-2 py-3 px-4 mb-4 text-base text-form"
+              id="email"
+              placeholder="メールアドレス"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+          <div>
+            <label className="w-full text-base mb-3 font-bold" htmlFor="password">
+              パスワード
+            </label>
+            <input
+              type="password"
+              name="password"
+              className="w-full rounded-2 py-3 px-4 mb-4 text-base text-form"
+              id="password"
+              placeholder="パスワード"
+              required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+          <div>
+            <label
+              className="w-full text-base mb-3 font-bold"
+              htmlFor="passwordConf"
+            >
+              パスワード(確認)
+            </label>
+            <input
+              type="password"
+              name="passwordConf"
+              className="w-full rounded-2 py-3 px-4 mb-4 text-base text-form"
+              id="passwordConf"
+              placeholder="パスワード(確認)"
+              required
+              value={passwordConf}
+              onChange={(e) => setPasswordConf(e.target.value)}
+            />
+          </div>
+          <button
+            className="border-bases border-3 w-full font-bold text-base py-3 px-4 rounded-42 flex justify-end items-center"
+            type="submit"
+          >
+            ログイン<img src="./images/Arrow.svg" alt="" />
+          </button>
         </div>
-      </main>
-    </div>
+        <hr className="my-8" />
+        <div className="signup">
+          <h1 className="text-4xl font-bold text-left mb-4">新規登録</h1>
+          <p className="text-sm text-bases mb-8">
+            会員登録で「旅ビンゴ」を利用できます。
+            <br />
+            旅の記録や思い出をビンゴにして豪華景品をGET！！
+          </p>
+          <Link
+            href="/signup"
+            className="bg-accent block text-center w-full font-bold text-base py-3 px-4 rounded-42"
+          >
+            新規会員登録をする
+          </Link>
+        </div>
+      </form>
+    </main>
   );
 }

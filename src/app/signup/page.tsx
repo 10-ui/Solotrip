@@ -29,7 +29,7 @@ export default function Signup() {
         <h1 className="text-4xl font-bold text-left mb-8">新規登録</h1>
         <form className="w-full" onSubmit={onSubmit}>
           <div>
-            <label className="w-full text-base mb-3 font-bold" htmlFor="email">
+            <label className="w-full text-base mb-3 font-bold" htmlFor="text">
               ニックネーム
             </label>
             <input
@@ -39,7 +39,7 @@ export default function Signup() {
               id="text"
               placeholder="ニックネーム"
               required
-              value={email}
+              // value={email}
               // onChange={(e) => setEmail(e.target.value)}
             />
           </div>
@@ -76,7 +76,7 @@ export default function Signup() {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <div className='mb-8'>
+          <div className="mb-8">
             <label
               className="w-full text-base mb-3 font-bold"
               htmlFor="passwordConf"
@@ -95,7 +95,10 @@ export default function Signup() {
             />
           </div>
           <div>
-            <button className="bg-accent w-full font-bold text-base py-3 px-4 rounded-42" type="submit">
+            <button
+              className="bg-accent w-full font-bold text-base py-3 px-4 rounded-42"
+              type="submit"
+            >
               新規登録する
             </button>
           </div>
