@@ -47,7 +47,10 @@ export default function Login() {
             />
           </div>
           <div>
-            <label className="w-full text-base mb-3 font-bold" htmlFor="password">
+            <label
+              className="w-full text-base mb-3 font-bold"
+              htmlFor="password"
+            >
               パスワード
             </label>
             <input
@@ -83,7 +86,8 @@ export default function Login() {
             className="border-bases border-3 w-full font-bold text-base py-3 px-4 rounded-42 flex justify-end items-center"
             type="submit"
           >
-            ログイン<img src="./images/Arrow.svg" alt="" />
+            ログインする
+            <img src="./images/Arrow.svg" alt="矢印" className="pl-[79px]" />
           </button>
         </div>
         <hr className="my-8" />

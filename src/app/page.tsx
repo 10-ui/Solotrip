@@ -6,11 +6,12 @@ import Sliders from './@sliders/page';
 // import Test from './@test/page';
 import Introduce from './@introduce/page';
 import Link from 'next/link';
+import Header from './@header/page';
 
 export default function Home() {
   return (
     <>
-      <header className="fixed mx-[6.5dvw] mt-[5dvh] z-50">
+      {/* <header className="fixed mx-[6.5dvw] mt-[5dvh] z-50">
         <Image
           className="w-[30dvw] fixed bg-[#EEF2E8] py-1 px-2 box-content rounded"
           src={Logo}
@@ -25,8 +26,9 @@ export default function Home() {
             ></div>
           </Link>
         </div>
-      </header>
-      <main>
+      </header> */}
+      <Header/>
+      {/* <main>
         <section className="topview mb-[75px]">
           <div className="relative">
             <Sliders />
@@ -49,7 +51,7 @@ export default function Home() {
           <Instagram />
         </section>
         <Introduce />
-      </main>
+      </main> */}
     </>
   );
 }
