@@ -10,8 +10,14 @@ body {
   background-color: #009b9f;
 }
 body label,
-body input {
+body input,
+body a {
   display: block;
+}
+body .menu,
+body .menu::before,
+body .menu::after {
+  transition: all 0.5s ease-in;
 }
 body .swiper {
   width: 100dvw;

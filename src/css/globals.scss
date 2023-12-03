@@ -11,8 +11,14 @@
 body {
   background-color: #009b9f;
   label,
-  input {
+  input,
+  a {
     display: block;
+  }
+  .menu,
+  .menu::before,
+  .menu::after {
+    transition: all .5s ease-in;
   }
   .swiper {
     width: 100dvw;
