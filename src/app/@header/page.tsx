@@ -11,12 +11,8 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   function toggleMenu() {
     if (isMenuOpen) {
-      // nav.classList.remove('right-0');
-      // nav.classList.remove('open');
       setIsMenuOpen(false);
     } else {
-      // nav.classList.add('right-0');
-      // nav.classList.add('open');
       setIsMenuOpen(true);
     }
   }
@@ -29,7 +25,7 @@ export default function Header() {
               <Image src={Logo} alt="ソロトリロゴ"></Image>
             </Link>
           </h1>
-          <div className="hbg-menu" onClick={() => toggleMenu()}>
+          <div className="hbg-menu" onClick={toggleMenu}>
             <div
               className={`menu relative w-25 h-line rounded-2
                             ${isMenuOpen ? 'bg-transparent' : 'bg-darks'}
@@ -67,19 +63,28 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link href="/login">
-                <Image src={Alogo} alt="ソロトリHP"></Image>
+              <Link href="/login" onClick={toggleMenu}>
+                <Image src={Alogo} alt="loginフォーム"></Image>
               </Link>
             </li>
           </ul>
           <ul className="mt-48 text-center">
-            <li className="py-2 rounded-2 border-y-2 text-xl font-bold text-main">
+            <li
+              className="py-2 rounded-2 border-y-2 text-xl font-bold text-main"
+              onClick={toggleMenu}
+            >
               <Link href="/">TOP</Link>
             </li>
-            <li className="py-2 rounded-2 border-b-2 text-xl font-bold text-main">
+            <li
+              className="py-2 rounded-2 border-b-2 text-xl font-bold text-main"
+              onClick={toggleMenu}
+            >
               <Link href="#">旅マインド</Link>
             </li>
-            <li className="py-2 rounded-2 border-b-2 text-xl font-bold text-main">
+            <li
+              className="py-2 rounded-2 border-b-2 text-xl font-bold text-main"
+              onClick={toggleMenu}
+            >
               <Link href="#">旅ビンゴ</Link>
             </li>
           </ul>

@@ -25,7 +25,7 @@ export default function Signup() {
 
   return (
     <>
-      <main className="inner w-350 mx-auto mt-40 mb-160 text-bases">
+      <main className="inner w-350 mx-auto mt-100 mb-160 text-bases">
         <h1 className="text-4xl font-bold text-left mb-8">新規登録</h1>
         <form className="w-full" onSubmit={onSubmit}>
           <div>
@@ -35,7 +35,7 @@ export default function Signup() {
             <input
               type="text"
               name="text"
-              className="w-full rounded-2 py-3 px-4 mb-4 text-base text-form"
+              className="w-full rounded-2 py-3 px-4 mb-4 text-base text-darks"
               id="text"
               placeholder="ニックネーム"
               required
@@ -50,7 +50,7 @@ export default function Signup() {
             <input
               type="email"
               name="email"
-              className="w-full rounded-2 py-3 px-4 mb-4 text-base text-form"
+              className="w-full rounded-2 py-3 px-4 mb-4 text-base text-darks"
               id="email"
               placeholder="メールアドレス"
               required
@@ -68,9 +68,9 @@ export default function Signup() {
             <input
               type="password"
               name="password"
-              className="w-full rounded-2 py-3 px-4 mb-4 text-base text-form"
+              className="w-full rounded-2 py-3 px-4 mb-4 text-base text-darks"
               id="password"
-              placeholder="パスワード"
+              placeholder="パスワード(5文字以上)"
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -86,7 +86,7 @@ export default function Signup() {
             <input
               type="password"
               name="passwordConf"
-              className="w-full rounded-2 py-3 px-4 mb-4 text-base text-form"
+              className="w-full rounded-2 py-3 px-4 mb-4 text-base text-darks"
               id="passwordConf"
               placeholder="パスワード(再入力)"
               required

@@ -3,31 +3,44 @@ import Logo from '../../public/images/logo.svg';
 import Back from '../../public/images/background.png';
 import Instagram from './@instagram/page';
 import Sliders from './@sliders/page';
-// import Test from './@test/page';
-import Introduce from './@introduce/page';
 import Link from 'next/link';
 import Header from './@header/page';
-
+import Footer from './@footer/page';
+import Goheimochi from '../../public/images/slider/Goheimochi.png';
+import Guiter from '../../public/images/slider/Guiter.png';
+import Ichigo from '../../public/images/slider/Ichigo.png';
+import Kaminari from '../../public/images/slider/Kaminari.png';
+import Night from '../../public/images/slider/Night.png';
+import Shisa from '../../public/images/slider/Shisa.png';
 export default function Home() {
+  let count = 0;
+  const countUp = () => {
+    console.log(count++);
+  };
+  setInterval(countUp, 1000);
   return (
     <>
-      {/* <header className="fixed mx-[6.5dvw] mt-[5dvh] z-50">
-        <Image
-          className="w-[30dvw] fixed bg-[#EEF2E8] py-1 px-2 box-content rounded"
-          src={Logo}
-          alt="ソロトリロゴ"
-        ></Image>
-        <div className="hbg-menu fixed right-[6.5dvw]">
-          <Link href="/login">
-            <div
-              className=" menu relative w-10 h-1 bg-slate-50 rounded
-                          before:absolute before:w-10 before:h-1 before:bg-slate-50 before:rounded before:top-3
-                          after:absolute after:w-10 after:h-1 after:bg-slate-50 after:rounded after:top-6"
-            ></div>
-          </Link>
-        </div>
-      </header> */}
-      <Header/>
+      {/* <div className="sliders">
+        <ul>
+          <li className="slider-imgs">
+            <Image src={Ichigo} alt="佐賀県名物白いちご"></Image>
+            <Image src={Goheimochi} alt="輝く五平餅"></Image>
+            <Image
+              src={Guiter}
+              alt="海辺でサングラスを掛けてギターを弾く女性"
+            ></Image>
+            <Image src={Night} alt="湖の近くの岩場で日の入りを見る男性"></Image>
+            <Image src={Shisa} alt="沖縄のシーサー"></Image>
+            <Image src={Kaminari} alt="東京の浅草寺雷門"></Image>
+          </li>
+          <li className="slider-imgs"></li>
+          <li className="slider-imgs"></li>
+          <li className="slider-imgs"></li>
+          <li className="slider-imgs"></li>
+          <li className="slider-imgs"></li>
+        </ul>
+      </div> */}
+      {/* <Header/> */}
       {/* <main>
         <section className="topview mb-[75px]">
           <div className="relative">

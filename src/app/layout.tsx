@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 // import { Inter } from 'next/font/google'
 import Favicon from '../../public/images/favicon/solo.ico';
 import '../css/globals.css';
+import Header from './@header/page';
 
 export const metadata: Metadata = {
   title: {
@@ -19,7 +20,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
