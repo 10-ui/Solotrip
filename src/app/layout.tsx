@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import Favicon from '../../public/images/favicon/solo.ico';
 import '../css/globals.css';
 import Header from './@header/page';
+import Footer from './@footer/page';
 
 export const metadata: Metadata = {
   title: {
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body>
         <Header />
         {children}
+        <Footer/>
       </body>
     </html>
   );
