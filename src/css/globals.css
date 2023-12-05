@@ -17,7 +17,31 @@ body a {
 body .menu,
 body .menu::before,
 body .menu::after {
-  transition: all 0.5s ease-in;
+  transition: all 0.3s ease-in;
+}
+body .sliders ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+body .sliders ul .reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+body .sliders ul li:nth-of-type(odd) img {
+  width: 35vw;
+  height: 285px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .sliders ul li:nth-of-type(even) img {
+  width: 65vw;
+  height: 285px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .sliders ul .slider-imgs {
+  height: 30.03003003dvh;
+  overflow: hidden;
 }
 body .swiper {
   width: 100dvw;

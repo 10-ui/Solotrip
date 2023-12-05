@@ -18,7 +18,34 @@ body {
   .menu,
   .menu::before,
   .menu::after {
-    transition: all .5s ease-in;
+    transition: all 0.3s ease-in;
+  }
+  .sliders {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      .reverse {
+        display: flex;
+        flex-direction: row-reverse;
+      }
+      li:nth-of-type(odd) img {
+        width: 35vw;
+        height: 285px;
+        object-fit: cover;
+      }
+      li:nth-of-type(even) img {
+        width: 65vw;
+        height: 285px;
+        object-fit: cover;
+      }
+      .slider-imgs {
+        height: calc(100dvh / 3.33);
+        overflow: hidden;
+        // img {
+        //   transform: translateY(-100%);
+        // }
+      }
+    }
   }
   .swiper {
     width: 100dvw;
