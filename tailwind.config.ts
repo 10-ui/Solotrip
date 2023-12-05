@@ -26,7 +26,7 @@ const config: Config = {
         accent: '#E07510',
         bases: '#EEF2E8',
         form: '#2222224D',
-        darks: '#222222',
+        darks: '#393939',
       },
       spacing: {
         line: '2px',
@@ -38,6 +38,8 @@ const config: Config = {
         76: '76px',
         160: '160px',
         350: '350px',
+        sleft: '30vw',
+        sright: '70vw',
         vw: '100vw',
         vh: '100vh',
       },
