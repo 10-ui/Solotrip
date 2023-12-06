@@ -87,6 +87,12 @@ export default function Header() {
             >
               <Link href="#">旅ビンゴ</Link>
             </li>
+            <li
+              className="py-2 rounded-2 border-b-2 text-xl font-bold text-main"
+              onClick={toggleMenu}
+            >
+              <Link href="/handbook">旅のハンドブック</Link>
+            </li>
           </ul>
         </nav>
       </header>
