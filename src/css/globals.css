@@ -4,6 +4,7 @@
 @tailwind utilities;
 * {
   font-family: "Noto Sans JP";
+  box-sizing: border-box;
 }
 
 body {
