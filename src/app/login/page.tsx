@@ -52,7 +52,7 @@ export default function Login() {
   };
 
   return (
-    <main className="w-350 mx-auto mt-100 mb-160 text-bases" id="login">
+    <main className="w-350 mx-auto mt-100 text-bases" id="login">
       <section className={`${reset ? 'hidden' : ''}`} id="loging">
         <h1 className="text-4xl font-bold text-left mb-8">ログイン</h1>
         <form className="mb-8" onSubmit={onLogin}>
