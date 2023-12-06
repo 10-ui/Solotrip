@@ -1,7 +1,7 @@
 'use client';
 import { supabase } from '../../../utils/supabase';
 import { useRouter } from 'next/navigation';
-import Header from './@Header/page';
+import Mail from './@Mail/page';
 export default function Top() {
   const router = useRouter();
 
@@ -23,7 +23,7 @@ export default function Top() {
         <main className="inner">
           <div>
             <h1>トップページ</h1>
-            <Header/>
+            <Mail />
             <form onSubmit={Logout}>
               <button type="submit">ログアウトする</button>
             </form>

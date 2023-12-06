@@ -13,11 +13,11 @@ import Kaminari from '../../public/images/slider/Kaminari.png';
 import Night from '../../public/images/slider/Night.png';
 import Shisa from '../../public/images/slider/Shisa.png';
 export default function Home() {
-  let count = 0;
-  const countUp = () => {
-    console.log(count++);
-  };
-  setInterval(countUp, 1000);
+  // let count = 0;
+  // const countUp = () => {
+  //   console.log(count++);
+  // };
+  // setInterval(countUp, 1000);
   return (
     <>
       {/* <div className="sliders">

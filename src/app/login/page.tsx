@@ -10,7 +10,6 @@ export default function Login() {
   const [email, setEmail] = useState('');
   const [forgotemail, setForgotEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [passwordConf, setPasswordConf] = useState('');
 
   function toggleReset() {
     if (reset) {
@@ -25,7 +24,7 @@ export default function Login() {
     try {
       const { error: sendEmailError } =
         await supabase.auth.resetPasswordForEmail(email, {
-          redirectTo: 'http://localhost:3000/passwordReset/',
+          redirectTo: 'http://localhost:3000/passwordreset/',
         });
       if (sendEmailError) {
         throw sendEmailError;
@@ -54,7 +53,7 @@ export default function Login() {
 
   return (
     <main className="w-350 mx-auto mt-100 mb-160 text-bases" id="login">
-      <section className={`${reset ? 'hidden' : ''}`} id='loging'>
+      <section className={`${reset ? 'hidden' : ''}`} id="loging">
         <h1 className="text-4xl font-bold text-left mb-8">ログイン</h1>
         <form className="mb-8" onSubmit={onLogin}>
           <div>
@@ -90,29 +89,7 @@ export default function Login() {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <div>
-            <label
-              className="w-full text-base mb-3 font-bold"
-              htmlFor="passwordConf"
-            >
-              パスワード(確認)
-            </label>
-            <input
-              type="password"
-              name="passwordConf"
-              className="w-full rounded-2 py-3 px-4 mb-4 text-base text-darks"
-              id="passwordConf"
-              placeholder="パスワード(確認)"
-              required
-              value={passwordConf}
-              onChange={(e) => setPasswordConf(e.target.value)}
-            />
-          </div>
-          <Link
-            href="#forgot"
-            className="mb-8 underline"
-            onClick={toggleReset}
-          >
+          <Link href="#forgot" className="mb-8 underline" onClick={toggleReset}>
             パスワードをお忘れですか？
           </Link>
           <button
@@ -124,7 +101,7 @@ export default function Login() {
           </button>
         </form>
       </section>
-      <hr className={`my-8 ${reset ? 'hidden' : ''}`}  />
+      <hr className={`my-8 ${reset ? 'hidden' : ''}`} />
       <section className={`${reset ? 'hidden' : ''}`} id="signup">
         <h2 className="text-4xl font-bold text-left mb-4">新規登録</h2>
         <p className="text-sm text-bases mb-8">

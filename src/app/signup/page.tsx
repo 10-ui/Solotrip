@@ -25,7 +25,7 @@ export default function Signup() {
 
   return (
     <>
-      <main className="inner w-350 mx-auto mt-100 mb-160 text-bases">
+      <main className="inner w-350 mx-auto mt-100 text-bases">
         <h1 className="text-4xl font-bold text-left mb-8">新規登録</h1>
         <form className="w-full" onSubmit={onSubmit}>
           <div>
