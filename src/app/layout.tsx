@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 // import { Inter } from 'next/font/google'
 import Favicon from '../../public/images/favicon/solo.ico';
-import '../css/globals.css';
+import '../styles/globals.scss';
 import Header from './@header/page';
 import Footer from './@footer/page';
 
