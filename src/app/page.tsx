@@ -61,10 +61,11 @@ export default function Home() {
           <p className="text-base text-center mb-[50px]">
             気ままな旅をしながら探してみませんか？
           </p>
-          <Instagram />
+
         </section>
         <Introduce />
       </main> */}
+      <Instagram />
     </>
   );
 }
