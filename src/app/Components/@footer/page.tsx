@@ -1,12 +1,12 @@
 import Image from 'next/image';
-import logo from '../../../public/images/logo.svg';
+import logo from '../../../../public/images/logo.svg';
 
 export default function Footer() {
   return (
     <>
       <footer className="bg-bases mt-160">
-        <div className='px-5 py-10'>
-          <Image src={logo} alt="ソロトリロゴ" ></Image>
+        <div className="px-5 py-10">
+          <Image src={logo} alt="ソロトリロゴ"></Image>
           <ul>
             <li className="font-bold">概要</li>
             <li>トップページ</li>

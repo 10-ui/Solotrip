@@ -1,9 +1,9 @@
 'use client';
 import Image from 'next/image';
-import Logo from '../../../public/images/logo.svg';
-import Clogo from '../../../public/images/solotori.svg';
-import Ilogo from '../../../public/images/Instagram.svg';
-import Alogo from '../../../public/images/account.svg';
+import Logo from '../../../../public/images/logo.svg';
+import Clogo from '../../../../public/images/solotori.svg';
+import Ilogo from '../../../../public/images/Instagram.svg';
+import Alogo from '../../../../public/images/account.svg';
 import Link from 'next/link';
 import { useState } from 'react';
 

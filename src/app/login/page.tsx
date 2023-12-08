@@ -143,12 +143,12 @@ export default function Login() {
               onChange={(e) => setForgotEmail(e.target.value)}
             />
           </div>
-          <Link
-            href="/signup"
+          <button
+            type="submit"
             className="bg-accent text-center w-full font-bold text-base py-4 px-4 mt-8 rounded-42"
           >
             送信
-          </Link>
+          </button>
           <Link
             href="#login"
             className="mt-4 text-center underline"
