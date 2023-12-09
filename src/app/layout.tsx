@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import Favicon from '../../public/images/favicon/solo.ico';
-import './styles/globals.css';
-import Header from './Components/@header/page';
-import Footer from './Components/@footer/page';
+import '../styles/globals.scss';
+import Header from './Components/@Header/page';
+import Footer from './Components/@Footer/page';
 
 export const metadata: Metadata = {
   title: {

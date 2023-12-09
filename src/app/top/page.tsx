@@ -1,7 +1,7 @@
 'use client';
 import { supabase } from '../../../utils/supabase';
 import { useRouter } from 'next/navigation';
-import Mail from './@Mail/page';
+import Mail from './@Infomation/page';
 export default function Top() {
   const router = useRouter();
 

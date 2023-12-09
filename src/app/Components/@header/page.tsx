@@ -19,7 +19,7 @@ export default function Header() {
   return (
     <>
       <header>
-        <div className="flex z-20 fixed top-0 right-0 px-6 items-center justify-between h-60 w-vw bg-bases border-b-1 border-darks">
+        <div className="flex z-20 fixed top-0 left-0 px-6 items-center justify-between h-60 w-vw bg-bases border-b-1 border-darks">
           <h1>
             <Link href="/">
               <Image src={Logo} alt="ソロトリロゴ"></Image>
