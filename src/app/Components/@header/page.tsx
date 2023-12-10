@@ -63,7 +63,7 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link href="/login" onClick={toggleMenu}>
+              <Link href="/Login" onClick={toggleMenu}>
                 <Image src={Alogo} alt="loginフォーム"></Image>
               </Link>
             </li>
@@ -91,7 +91,7 @@ export default function Header() {
               className="py-2 rounded-2 border-b-2 text-xl font-bold text-main"
               onClick={toggleMenu}
             >
-              <Link href="/handbook">旅のハンドブック</Link>
+              <Link href="/Handbook">旅のハンドブック</Link>
             </li>
           </ul>
         </nav>

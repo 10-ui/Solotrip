@@ -45,7 +45,7 @@ export default function Login() {
       if (signInError) {
         throw signInError;
       }
-      await router.push('/top');
+      await router.push('/Top');
     } catch {
       alert('エラーが発生しました');
     }
@@ -110,7 +110,7 @@ export default function Login() {
           旅の記録や思い出をビンゴにして豪華景品をGET！！
         </p>
         <Link
-          href="/signup"
+          href="/Signup"
           className="bg-accent text-center w-full font-bold text-base py-3 px-4 rounded-42 flex justify-end items-center"
         >
           新規会員登録をする

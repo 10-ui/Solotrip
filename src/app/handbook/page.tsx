@@ -120,7 +120,7 @@ export default function handBook() {
               id="conf"
             />
             <p>
-              <Link href="/policy" className="ml-3 inline">
+              <Link href="/Policy" className="ml-3 inline">
                 プライバシーポリシー
               </Link>
               に同意します。
