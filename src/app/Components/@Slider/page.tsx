@@ -1,14 +1,14 @@
 import Image from 'next/image';
-import Goheimochi from '../../public/images/slider/Goheimochi.png';
-import Guiter from '../../public/images/slider/Guiter.png';
-import Ichigo from '../../public/images/slider/Ichigo.png';
-import Kaminari from '../../public/images/slider/Kaminari.png';
-import Night from '../../public/images/slider/Night.png';
-import Shisa from '../../public/images/slider/Shisa.png';
+import Goheimochi from '../../../../public/images/slider/Goheimochi.png';
+import Guiter from '../../../../public/images/slider/Guiter.png';
+import Ichigo from '../../../../public/images/slider/Ichigo.png';
+import Kaminari from '../../../../public/images/slider/Kaminari.png';
+import Night from '../../../../public/images/slider/Night.png';
+import Shisa from '../../../../public/images/slider/Shisa.png';
 
 export default function Slider() {
   return (
-    <div className="sliders">
+    <div className="sliders mb-8">
       <ul>
         <li className="slider-imgs">
           <Image src={Ichigo} alt="佐賀県名物白いちご"></Image>

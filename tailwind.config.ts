@@ -21,6 +21,9 @@ const config: Config = {
       8: '8px',
     },
     extend: {
+      // gridTemplateColumns: {
+      //   slide: '1fr 2fr',
+      // },
       colors: {
         main: '#009B9F',
         accent: '#E07510',
