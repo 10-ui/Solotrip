@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import React from 'react';
-export default function handBook() {
+export default function HandBook() {
   const router = useRouter();
   const doRedirect = () => {
     router.push('/handbook');
