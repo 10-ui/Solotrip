@@ -32,7 +32,6 @@ export default function Slider() {
       });
       if (num === 0) {
         sliderR[5].classList.add('leave-r');
-        console.log(sliderR[5]);
       } else {
         sliderR.forEach((item, index) => {
           index === num - 1
@@ -47,7 +46,6 @@ export default function Slider() {
       });
       if (num === 0) {
         sliderD1[5].classList.add('leave-d');
-        console.log(sliderD1[5]);
       } else {
         sliderD1.forEach((item, index) => {
           index === num - 1
@@ -62,7 +60,6 @@ export default function Slider() {
       });
       if (num === 0) {
         sliderD2[5].classList.add('leave-d');
-        console.log(sliderD2[5]);
       } else {
         sliderD2.forEach((item, index) => {
           index === num - 1
@@ -77,7 +74,6 @@ export default function Slider() {
       });
       if (num === 0) {
         sliderL[5].classList.add('leave-l');
-        console.log(sliderL[5]);
       } else {
         sliderL.forEach((item, index) => {
           index === num - 1
@@ -92,7 +88,6 @@ export default function Slider() {
       });
       if (num === 0) {
         sliderU1[5].classList.add('leave-u');
-        console.log(sliderU1[5]);
       } else {
         sliderU1.forEach((item, index) => {
           index === num - 1
@@ -107,7 +102,6 @@ export default function Slider() {
       });
       if (num === 0) {
         sliderU2[5].classList.add('leave-u');
-        console.log(sliderU2[5]);
       } else {
         sliderU2.forEach((item, index) => {
           index === num - 1
@@ -115,7 +109,7 @@ export default function Slider() {
             : item.classList.remove('leave-u');
         });
       }
-    }, 3000);
+    }, 3500);
     return () => clearInterval(count);
   }, []);
 
