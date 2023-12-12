@@ -5,7 +5,7 @@ export default function Home() {
     <>
       <Slider />
       <main className="w-350 mx-auto mt-100 text-bases">
-        {/* <Instagram /> */}
+        <Instagram />
       </main>
     </>
   );
