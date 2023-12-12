@@ -79,7 +79,7 @@ export default function Header() {
               className="py-2 rounded-2 border-b-2 text-xl font-bold text-main"
               onClick={toggleMenu}
             >
-              <Link href="#">旅マインド</Link>
+              <Link href="/Tripmind">旅マインド</Link>
             </li>
             <li
               className="py-2 rounded-2 border-b-2 text-xl font-bold text-main"
