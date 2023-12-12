@@ -3,7 +3,6 @@ import Favicon from '../../public/images/favicon/solo.ico';
 import '../styles/globals.scss';
 import Header from './Components/@Header/page';
 import Footer from './Components/@Footer/page';
-
 export const metadata: Metadata = {
   title: {
     default: 'Solotrip スペシャルサイト',
