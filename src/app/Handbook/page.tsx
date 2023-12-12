@@ -5,7 +5,7 @@ import React from 'react';
 export default function HandBook() {
   const router = useRouter();
   const doRedirect = () => {
-    router.push('/handbook');
+    router.push('/Handbook');
   };
 
   return (
