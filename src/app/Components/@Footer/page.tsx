@@ -7,7 +7,7 @@ export default function Footer() {
       <footer className="bg-bases mt-160">
         <div className="px-5 py-10">
           <Image src={logo} alt="ソロトリロゴ"></Image>
-          <ul>
+          <ul className='mt-4'>
             <li className="font-bold">概要</li>
             <li>トップページ</li>
             <li>旅マインドのつくり方</li>

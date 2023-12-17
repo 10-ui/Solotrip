@@ -21,9 +21,9 @@ const config: Config = {
       8: '8px',
     },
     extend: {
-      // gridTemplateColumns: {
-      //   slide: '1fr 2fr',
-      // },
+      dropShadow: {
+        ttl: '3px 5px 2px rgba(255, 255, 255, 0.25)',
+      },
       colors: {
         main: '#009B9F',
         accent: '#E07510',
