@@ -19,12 +19,18 @@ export default function Slider() {
     const count = setInterval(() => {
       setX(refX.current + 1);
       const num = refX.current;
-      const sliderR = document.querySelectorAll('.right img');
-      const sliderD1 = document.querySelectorAll('.down1 img');
-      const sliderD2 = document.querySelectorAll('.down2 img');
-      const sliderL = document.querySelectorAll('.left img');
-      const sliderU1 = document.querySelectorAll('.up1 img');
-      const sliderU2 = document.querySelectorAll('.up2 img');
+      const sliderR =
+        document.querySelectorAll('.right img');
+      const sliderD1 =
+        document.querySelectorAll('.down1 img');
+      const sliderD2 =
+        document.querySelectorAll('.down2 img');
+      const sliderL =
+        document.querySelectorAll('.left img');
+      const sliderU1 =
+        document.querySelectorAll('.up1 img');
+      const sliderU2 =
+        document.querySelectorAll('.up2 img');
       sliderR.forEach((item, index) => {
         index === num
           ? item.classList.add('enter-r')
@@ -114,74 +120,105 @@ export default function Slider() {
   }, []);
 
   return (
-    <section className="sliders">
+    <section className="sliders relative">
+      <div className="absolute top-0 left-0 right-0 bottom-0 bg-form z-[2]"></div>
       <ul className="grid grid-cols-3 grid-rows-3 bg-bases gap-0.5 w-vw h-vh">
         <li className="slider-imgs right">
-          <Image src={Ichigo} alt="佐賀県名物白いちご"></Image>
+          <Image
+            src={Ichigo}
+            alt="佐賀県名物白いちご"></Image>
           <Image src={Goheimochi} alt="輝く五平餅"></Image>
           <Image
             src={Guiter}
-            alt="海辺でサングラスを掛けてギターを弾く女性"
-          ></Image>
-          <Image src={Night} alt="湖の近くの岩場で日の入りを見る男性"></Image>
+            alt="海辺でサングラスを掛けてギターを弾く女性"></Image>
+          <Image
+            src={Night}
+            alt="湖の近くの岩場で日の入りを見る男性"></Image>
           <Image src={Shisa} alt="沖縄のシーサー"></Image>
-          <Image src={Kaminari} alt="東京の浅草寺雷門"></Image>
+          <Image
+            src={Kaminari}
+            alt="東京の浅草寺雷門"></Image>
         </li>
 
         <li className="slider-imgs down1">
-          <Image src={Kaminari} alt="東京の浅草寺雷門"></Image>
-          <Image src={Ichigo} alt="佐賀県名物白いちご"></Image>
+          <Image
+            src={Kaminari}
+            alt="東京の浅草寺雷門"></Image>
+          <Image
+            src={Ichigo}
+            alt="佐賀県名物白いちご"></Image>
           <Image src={Goheimochi} alt="輝く五平餅"></Image>
           <Image
             src={Guiter}
-            alt="海辺でサングラスを掛けてギターを弾く女性"
-          ></Image>
-          <Image src={Night} alt="湖の近くの岩場で日の入りを見る男性"></Image>
+            alt="海辺でサングラスを掛けてギターを弾く女性"></Image>
+          <Image
+            src={Night}
+            alt="湖の近くの岩場で日の入りを見る男性"></Image>
           <Image src={Shisa} alt="沖縄のシーサー"></Image>
         </li>
         <li className="slider-imgs up2">
           <Image src={Goheimochi} alt="輝く五平餅"></Image>
           <Image
             src={Guiter}
-            alt="海辺でサングラスを掛けてギターを弾く女性"
-          ></Image>
-          <Image src={Night} alt="湖の近くの岩場で日の入りを見る男性"></Image>
+            alt="海辺でサングラスを掛けてギターを弾く女性"></Image>
+          <Image
+            src={Night}
+            alt="湖の近くの岩場で日の入りを見る男性"></Image>
           <Image src={Shisa} alt="沖縄のシーサー"></Image>
-          <Image src={Kaminari} alt="東京の浅草寺雷門"></Image>
-          <Image src={Ichigo} alt="佐賀県名物白いちご"></Image>
+          <Image
+            src={Kaminari}
+            alt="東京の浅草寺雷門"></Image>
+          <Image
+            src={Ichigo}
+            alt="佐賀県名物白いちご"></Image>
         </li>
         <li className="slider-imgs down2">
           <Image src={Shisa} alt="沖縄のシーサー"></Image>
-          <Image src={Kaminari} alt="東京の浅草寺雷門"></Image>
-          <Image src={Ichigo} alt="佐賀県名物白いちご"></Image>
+          <Image
+            src={Kaminari}
+            alt="東京の浅草寺雷門"></Image>
+          <Image
+            src={Ichigo}
+            alt="佐賀県名物白いちご"></Image>
           <Image src={Goheimochi} alt="輝く五平餅"></Image>
           <Image
             src={Guiter}
-            alt="海辺でサングラスを掛けてギターを弾く女性"
-          ></Image>
-          <Image src={Night} alt="湖の近くの岩場で日の入りを見る男性"></Image>
+            alt="海辺でサングラスを掛けてギターを弾く女性"></Image>
+          <Image
+            src={Night}
+            alt="湖の近くの岩場で日の入りを見る男性"></Image>
         </li>
         <li className="slider-imgs up1">
           <Image
             src={Guiter}
-            alt="海辺でサングラスを掛けてギターを弾く女性"
-          ></Image>
-          <Image src={Night} alt="湖の近くの岩場で日の入りを見る男性"></Image>
+            alt="海辺でサングラスを掛けてギターを弾く女性"></Image>
+          <Image
+            src={Night}
+            alt="湖の近くの岩場で日の入りを見る男性"></Image>
           <Image src={Shisa} alt="沖縄のシーサー"></Image>
-          <Image src={Kaminari} alt="東京の浅草寺雷門"></Image>
-          <Image src={Ichigo} alt="佐賀県名物白いちご"></Image>
+          <Image
+            src={Kaminari}
+            alt="東京の浅草寺雷門"></Image>
+          <Image
+            src={Ichigo}
+            alt="佐賀県名物白いちご"></Image>
           <Image src={Goheimochi} alt="輝く五平餅"></Image>
         </li>
         <li className="slider-imgs left">
-          <Image src={Night} alt="湖の近くの岩場で日の入りを見る男性"></Image>
+          <Image
+            src={Night}
+            alt="湖の近くの岩場で日の入りを見る男性"></Image>
           <Image src={Shisa} alt="沖縄のシーサー"></Image>
-          <Image src={Kaminari} alt="東京の浅草寺雷門"></Image>
-          <Image src={Ichigo} alt="佐賀県名物白いちご"></Image>
+          <Image
+            src={Kaminari}
+            alt="東京の浅草寺雷門"></Image>
+          <Image
+            src={Ichigo}
+            alt="佐賀県名物白いちご"></Image>
           <Image src={Goheimochi} alt="輝く五平餅"></Image>
           <Image
             src={Guiter}
-            alt="海辺でサングラスを掛けてギターを弾く女性"
-          ></Image>
+            alt="海辺でサングラスを掛けてギターを弾く女性"></Image>
         </li>
       </ul>
     </section>
