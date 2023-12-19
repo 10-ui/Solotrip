@@ -39,7 +39,7 @@ export default function Copy() {
       </div>
       <p
         className="absolute left-1/2 animate-bounces
-                    bottom-20 z-[4] 
+                    bottom-20 z-[4] scroll
                     text-center text-2xl 
                     text-bases font-black
                     bg-zabuton w-fit px-1 rounded-10">
