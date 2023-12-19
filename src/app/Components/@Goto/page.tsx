@@ -1,9 +1,42 @@
 'use client';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Image from 'next/image';
 import hukidashi from '../../../../public/images/hukidashi.png';
-import { useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function Goto() {
+  const [src, setSrc] = useState('');
+  const [alt, setAlt] = useState('');
+  const [esrc, esetSrc] = useState('');
+  const [ealt, esetAlt] = useState('');
+  const [fsrc, fsetSrc] = useState('');
+  const [falt, fsetAlt] = useState('');
+  const ref = useRef(null);
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      gsap.registerPlugin(ScrollTrigger);
+      setAnimation();
+    }
+  }, []);
+
+  const setAnimation = () => {
+    gsap.fromTo(
+      ref.current,
+      { x: -100, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: ref.current,
+          toggleActions: 'play none none reverse',
+          start: 'top 65%', //開始時のトリガー条件
+          end: 'bottom 65%', //終了時のトリガー条件
+          // markers: true, // マーカー表示
+        },
+      }
+    );
+  };
   useEffect(() => {
     async function getApi() {
       const api = await fetch(
@@ -14,14 +47,36 @@ export default function Goto() {
 
     getApi()
       .then((response) => {
-        console.log(response.imgs);
+        console.log(response.imgs.eventDetails.events.src);
+        console.log(response.imgs.eventDetails.events.alt);
+        const ran = response.imgs.eventDetails.events.alt;
+        const dom = response.imgs.eventDetails.events.src;
+        console.log(
+          ran[Math.floor(Math.random() * ran.length)]
+        );
+        const fmath = Math.floor(
+          Math.random() * ran.length
+        );
+        const emath = Math.floor(
+          Math.random() * ran.length
+        );
+        fsetSrc(dom[fmath]);
+        fsetAlt(ran[fmath]);
+        esetSrc(dom[emath]);
+        esetAlt(ran[emath]);
+
+        ran[Math.floor(Math.random() * ran.length)];
+
+        setSrc(response.imgs.conceptDetails.concepts.src);
+
+        setAlt(response.imgs.conceptDetails.concepts.alt);
       })
       .catch(() => {
         console.log('err');
       });
   }, []);
   return (
-    <div className="mt-8">
+    <div className="my-8" ref={ref}>
       <Image
         src={hukidashi}
         alt={`ちょっと`}
@@ -31,9 +86,17 @@ export default function Goto() {
         その役割、はずしてみませんか
       </h3>
       <div className="w-370 bg-bases mx-[10px] px-[15px] py-4 rounded-21">
-        {/* <Image src={} alt={} className="mb-2 rounded-20" />
-        <Image src={} alt={} className="mb-2 rounded-20" />
-        <Image src={} alt={} className="rounded-20" /> */}
+        <img
+          src={src}
+          alt={alt}
+          className="mb-2 rounded-20"
+        />
+        <img
+          src={esrc}
+          alt={ealt}
+          className="mb-2 rounded-20"
+        />
+        <img src={fsrc} alt={falt} className="rounded-20" />
       </div>
     </div>
   );
