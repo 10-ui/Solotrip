@@ -1,4 +1,21 @@
+'use client';
+import { useEffect, useState } from 'react';
+
 export default function Copy() {
+  const [hidden, setHidden] = useState(false);
+  const toggleVisibility = () => {
+    window.scrollY === 0
+      ? setHidden(false)
+      : setHidden(true);
+  };
+  useEffect(() => {
+    window.addEventListener('scroll', toggleVisibility);
+    return () =>
+      window.removeEventListener(
+        'scroll',
+        toggleVisibility
+      );
+  }, []);
   return (
     <>
       <div
@@ -38,11 +55,13 @@ export default function Copy() {
         </h2>
       </div>
       <p
-        className="absolute left-1/2 animate-bounces
-                    bottom-20 z-[4] scroll
+        className={`${
+          hidden ? 'hide' : ''
+        } absolute left-1/2 animate-bounces
+                    bottom-20 z-[4] scroll scroll
                     text-center text-2xl 
                     text-bases font-black
-                    bg-zabuton w-fit px-1 rounded-10">
+                    bg-zabuton w-fit px-1 rounded-10`}>
         scroll
         <br />↓
       </p>

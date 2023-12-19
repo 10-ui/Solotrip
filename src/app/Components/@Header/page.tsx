@@ -5,10 +5,27 @@ import Clogo from '../../../../public/images/solotori.svg';
 import Ilogo from '../../../../public/images/Instagram.svg';
 import Alogo from '../../../../public/images/account.svg';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  let nowPos = 0;
+  const toggleVisibility = () => {
+    window.scrollY > nowPos
+      ? setIsVisible(true)
+      : setIsVisible(false);
+    nowPos = window.scrollY;
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', toggleVisibility);
+    return () =>
+      window.removeEventListener(
+        'scroll',
+        toggleVisibility
+      );
+  }, []);
   function toggleMenu() {
     if (isMenuOpen) {
       setIsMenuOpen(false);
@@ -19,7 +36,10 @@ export default function Header() {
   return (
     <>
       <header>
-        <div className="fades flex z-20 fixed top-0 left-0 px-6 items-center justify-between h-60 w-vw bg-bases border-b-1 border-darks">
+        <div
+          className={` ${
+            isVisible ? 'hide' : ''
+          } fades flex z-20 fixed top-0 left-0 px-6 items-center justify-between h-60 w-vw bg-bases border-b-1 border-darks`}>
           <h1>
             <Link href="/">
               <Image
