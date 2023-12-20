@@ -23,6 +23,17 @@ export default function Bingo() {
           <p className={`${bingo.className} text-2xl text-center py-2 bg-bh tracking-widest`}>
             ★ BINGO! ★
           </p>
+          <div className="card grid">
+            <div className="circle"></div>
+            <div className="circle"></div>
+            <div className="circle"></div>
+            <div className="circle"></div>
+            <div className="circle"></div>
+            <div className="circle"></div>
+            <div className="circle"></div>
+            <div className="circle"></div>
+            <div className="circle"></div>
+          </div>
         </div>
       </section>
     </main>
