@@ -1,7 +1,5 @@
-'use client';
 import { Baloo_Bhaijaan_2 } from 'next/font/google';
 import { Yusei_Magic } from 'next/font/google';
-import { useRef, useEffect } from 'react';
 
 const steps = Baloo_Bhaijaan_2({
   weight: '800',

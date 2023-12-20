@@ -24,7 +24,8 @@ export default function Login() {
     try {
       const { error: sendEmailError } =
         await supabase.auth.resetPasswordForEmail(email, {
-          redirectTo: 'http://localhost:3000/passwordreset/',
+          redirectTo:
+            'http://localhost:3000/passwordreset/',
         });
       if (sendEmailError) {
         throw sendEmailError;
@@ -38,10 +39,11 @@ export default function Login() {
   const onLogin = async (e: any) => {
     e.preventDefault();
     try {
-      const { error: signInError } = await supabase.auth.signInWithPassword({
-        email: email,
-        password: password,
-      });
+      const { error: signInError } =
+        await supabase.auth.signInWithPassword({
+          email: email,
+          password: password,
+        });
       if (signInError) {
         throw signInError;
       }
@@ -52,12 +54,20 @@ export default function Login() {
   };
 
   return (
-    <main className="w-350 mx-auto mt-100 text-bases" id="login">
-      <section className={`${reset ? 'hidden' : ''}`} id="loging">
-        <h1 className="text-4xl font-bold text-left mb-8">ログイン</h1>
+    <main
+      className="w-350 mx-auto mt-100 text-bases"
+      id="login">
+      <section
+        className={`${reset ? 'hidden' : ''}`}
+        id="loging">
+        <h1 className="text-4xl font-bold text-left mb-8">
+          ログイン
+        </h1>
         <form className="mb-8" onSubmit={onLogin}>
           <div>
-            <label className="w-full text-base mb-3 font-bold" htmlFor="email">
+            <label
+              className="w-full text-base mb-3 font-bold"
+              htmlFor="email">
               メールアドレス
             </label>
             <input
@@ -74,8 +84,7 @@ export default function Login() {
           <div>
             <label
               className="w-full text-base mb-3 font-bold"
-              htmlFor="password"
-            >
+              htmlFor="password">
               パスワード
             </label>
             <input
@@ -89,21 +98,31 @@ export default function Login() {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <Link href="#forgot" className="mb-8 underline" onClick={toggleReset}>
+          <Link
+            href="#forgot"
+            className="mb-8 underline"
+            onClick={toggleReset}>
             パスワードをお忘れですか？
           </Link>
           <button
             className="border-bases border-3 w-full font-bold text-base py-3 px-4 rounded-42 flex justify-end items-center"
-            type="submit"
-          >
+            type="submit">
             ログインする
-            <img src="./images/Arrow.svg" alt="矢印" className="pl-[79px]" />
+            <img
+              src="./images/Arrow.svg"
+              alt="矢印"
+              className="pl-[79px]"
+            />
           </button>
         </form>
       </section>
       <hr className={`my-8 ${reset ? 'hidden' : ''}`} />
-      <section className={`${reset ? 'hidden' : ''}`} id="signup">
-        <h2 className="text-4xl font-bold text-left mb-4">新規登録</h2>
+      <section
+        className={`${reset ? 'hidden' : ''}`}
+        id="signup">
+        <h2 className="text-4xl font-bold text-left mb-4">
+          新規登録
+        </h2>
         <p className="text-sm text-bases mb-8">
           会員登録で「旅ビンゴ」を利用できます。
           <br />
@@ -111,13 +130,18 @@ export default function Login() {
         </p>
         <Link
           href="/Signup"
-          className="bg-accent text-center w-full font-bold text-base py-3 px-4 rounded-42 flex justify-end items-center"
-        >
+          className="bg-accent text-center w-full font-bold text-base py-3 px-4 rounded-42 flex justify-end items-center">
           新規会員登録をする
-          <img src="./images/Arrow.svg" alt="矢印" className="pl-[59px]" />
+          <img
+            src="./images/Arrow.svg"
+            alt="矢印"
+            className="pl-[59px]"
+          />
         </Link>
       </section>
-      <section className={`mt-100 mb-160 ${reset ? '' : 'hidden'}`} id="forgot">
+      <section
+        className={`mt-100 mb-160 ${reset ? '' : 'hidden'}`}
+        id="forgot">
         <h3 className="text-4xl font-bold text-left mb-4">
           パスワードリセット
         </h3>
@@ -129,7 +153,9 @@ export default function Login() {
           </p>
           <hr className="my-8" />
           <div>
-            <label className="w-full text-base mb-3 font-bold" htmlFor="email">
+            <label
+              className="w-full text-base mb-3 font-bold"
+              htmlFor="email">
               メールアドレス
             </label>
             <input
@@ -140,20 +166,20 @@ export default function Login() {
               placeholder="メールアドレス"
               required
               value={forgotemail}
-              onChange={(e) => setForgotEmail(e.target.value)}
+              onChange={(e) =>
+                setForgotEmail(e.target.value)
+              }
             />
           </div>
           <button
             type="submit"
-            className="bg-accent text-center w-full font-bold text-base py-4 px-4 mt-8 rounded-42"
-          >
+            className="bg-accent text-center w-full font-bold text-base py-4 px-4 mt-8 rounded-42">
             送信
           </button>
           <Link
             href="#login"
             className="mt-4 text-center underline"
-            onClick={toggleReset}
-          >
+            onClick={toggleReset}>
             ログインへ戻る
           </Link>
         </form>

@@ -111,7 +111,7 @@ export default function Header() {
             <li
               className="py-2 rounded-2 border-b-2 text-xl font-bold text-main"
               onClick={toggleMenu}>
-              <Link href="#">旅ビンゴ</Link>
+              <Link href="/Bingo">旅ビンゴ</Link>
             </li>
             <li
               className="py-2 rounded-2 border-b-2 text-xl font-bold text-main"

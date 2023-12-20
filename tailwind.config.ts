@@ -53,6 +53,8 @@ const config: Config = {
         form: '#2222224D',
         darks: '#393939',
         zabuton: '#00000066',
+        bh:'#DA71A2',
+        bb:'D5949A'
       },
       spacing: {
         line: '2px',
@@ -68,6 +70,7 @@ const config: Config = {
         76: '76px',
         160: '160px',
         200: '200px',
+        250: '250px',
         350: '350px',
         370: '370px',
         sleft: '30vw',
