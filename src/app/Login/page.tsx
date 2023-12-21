@@ -1,6 +1,6 @@
 'use client';
 import { supabase } from '../../../utils/supabase';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
@@ -10,6 +10,30 @@ export default function Login() {
   const [email, setEmail] = useState('');
   const [forgotemail, setForgotEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [currentUser, setcurrentUser] = useState('');
+
+  // 現在ログインしているユーザーを取得する処理
+  const getCurrentUser = async () => {
+    const { data } = await supabase.auth.getSession();
+    console.log(data); // デバッグ：セッションデータをログに出力
+
+    if (data && data.session !== null) {
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
+      console.log(user); // デバッグ：ユーザーデータをログに出力
+
+      if (user) {
+        setcurrentUser(user.email || '');
+      }
+      await router.push('/Bingo');
+    }
+  };
+
+  // HeaderコンポーネントがレンダリングされたときにgetCurrentUser関数が実行される
+  useEffect(() => {
+    getCurrentUser();
+  }, []);
 
   function toggleReset() {
     if (reset) {
@@ -47,7 +71,7 @@ export default function Login() {
       if (signInError) {
         throw signInError;
       }
-      await router.push('/Top');
+      await router.push('/');
     } catch {
       alert('エラーが発生しました');
     }

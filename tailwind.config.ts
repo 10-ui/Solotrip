@@ -9,6 +9,7 @@ const config: Config = {
   theme: {
     borderRadius: {
       2: '2px',
+      4: '4px',
       10: '10px',
       20: '20px',
       21: '21px',
@@ -53,8 +54,8 @@ const config: Config = {
         form: '#2222224D',
         darks: '#393939',
         zabuton: '#00000066',
-        bh:'#DA71A2',
-        bb:'D5949A'
+        bh: '#DA71A2',
+        bb: '#D5949A',
       },
       spacing: {
         line: '2px',

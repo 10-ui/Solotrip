@@ -6,10 +6,14 @@ import Ilogo from '../../../../public/images/Instagram.svg';
 import Alogo from '../../../../public/images/account.svg';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import { supabase } from '../../../../utils/supabase';
+import { useRouter } from 'next/navigation';
 
 export default function Header() {
+  const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+
   let nowPos = 0;
   const toggleVisibility = () => {
     window.scrollY > nowPos
@@ -18,6 +22,19 @@ export default function Header() {
     nowPos = window.scrollY;
   };
 
+  const Logout = async () => {
+    toggleMenu();
+    try {
+      const { error: logoutError } =
+        await supabase.auth.signOut();
+      if (logoutError) {
+        throw logoutError;
+      }
+      await router.push('/');
+    } catch {
+      alert('エラーが発生しました');
+    }
+  };
   useEffect(() => {
     window.addEventListener('scroll', toggleVisibility);
     return () =>
@@ -117,6 +134,11 @@ export default function Header() {
               className="py-2 rounded-2 border-b-2 text-xl font-bold text-main"
               onClick={toggleMenu}>
               <Link href="/Handbook">旅のハンドブック</Link>
+            </li>
+            <li
+              className={`py-2 rounded-2 border-b-2 text-xl font-bold text-main`}
+              onClick={Logout}>
+              <Link href="/Handbook">ログアウト</Link>
             </li>
           </ul>
         </nav>
